@@ -1,0 +1,22 @@
+{
+  "name": "image2text",
+  "version": "1.0.0",
+  "description": "Text extract from Image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrasannaBrabourame/Image2Text.git"
+  },
+  "author": "PRASANNA BRABOURAME",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrasannaBrabourame/Image2Text/issues"
+  },
+  "homepage": "https://github.com/PrasannaBrabourame/Image2Text#readme",
+  "dependencies": {
+    "tesseract.js": "^1.0.10"
+  }
+}
