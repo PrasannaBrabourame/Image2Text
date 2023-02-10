@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/PrasannaBrabourame/Image2Text#readme",
   "dependencies": {
-    "tesseract.js": "^1.0.19"
+    "tesseract.js": "^4.0.2"
   }
 }
