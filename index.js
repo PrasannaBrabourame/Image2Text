@@ -1,11 +1,17 @@
-var Tesseract = require('tesseract.js');
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-var job1 = Tesseract.recognize('./img1.png');
+const Tesseract = require('tesseract.js');
 
-job1.progress(message => console.log(message));
+const imagePath = './img1.png'; // Replace with the path to your image file
 
-job1.catch(err => console.error(err));
-
-job1.then(result => console.log(result));
-
-job1.finally(resultOrError => console.log(resultOrError));
+Tesseract.recognize(
+    imagePath,
+    'eng', // Language code for English
+    {
+        logger: info => console.log(info) // Optional logger function to view progress and logs
+    }
+).then(({ data: { text } }) => {
+    console.log('Extracted Text:', text);
+}).catch(error => {
+    console.error('Error:', error);
+});
